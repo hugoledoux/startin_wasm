@@ -54,10 +54,20 @@ const refreshcanvas = () => {
 };
 
 const leftclick = (event) => {
+  var b = document.getElementById("bDelete");
   const rect = canvas.getBoundingClientRect();
   const x = event.clientX - rect.left;
   const y = event.clientY - rect.top;
-  mydt.insert_one_pt(x, y, 0.0);
+  if (b.checked == false) {
+    mydt.insert_one_pt(x, y, 0.0);
+  }
+  else {
+    const nv = mydt.closest_point(x, y);
+    if (nv != 0) {
+      console.log(nv);
+      mydt.remove(nv);
+    } 
+  }
   refreshcanvas();
 };
 

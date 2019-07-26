@@ -59,4 +59,22 @@ impl DT {
         }
         trs
     }
+
+    pub fn closest_point(&self, px: f64, py: f64) -> usize {
+        let re = self.t.closest_point(px, py);
+        if re.is_none() {
+            return 0;
+        } else {
+            return re.unwrap();
+        }
+    }
+
+    pub fn remove(&mut self, v: usize) -> bool {
+        let re = self.t.remove(v);
+        if re.is_err() == true {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }
