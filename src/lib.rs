@@ -49,6 +49,10 @@ impl DT {
         pts
     }
 
+    pub fn all_edges(&self) -> Vec<usize> {
+        self.t.all_edges()
+    }
+
     pub fn all_triangles(&self) -> Vec<usize> {
         let mut trs: Vec<usize> = Vec::new();
         let otrs = self.t.all_triangles();

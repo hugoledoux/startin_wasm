@@ -24,22 +24,20 @@ const refreshcanvas = () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   
   const pts = mydt.all_vertices();
-  const trs = mydt.all_triangles();
+  const edges = mydt.all_edges();
 
   ctx.strokeStyle = "#6BCC60";
   ctx.lineWidth = 1;
-  for (let i = 0; i < trs.length; i += 3) {
-      let a = trs[i];
-      let b = trs[i + 1];
-      let c = trs[i + 2];
+  for (let i = 0; i < edges.length; i += 2) {
+    let a = edges[i];
+    let b = edges[i + 1];
 
-      ctx.beginPath();
-      ctx.moveTo(pts[2 * a], pts[2 * a + 1]);
-      ctx.lineTo(pts[2 * b], pts[2 * b + 1]);
-      ctx.lineTo(pts[2 * c], pts[2 * c + 1]);
-      ctx.closePath();
-      ctx.stroke();
-  }
+    ctx.beginPath();
+    ctx.moveTo(pts[2 * a], pts[2 * a + 1]);
+    ctx.lineTo(pts[2 * b], pts[2 * b + 1]);
+    ctx.closePath();
+    ctx.stroke();    
+  }  
 
   ctx.fillStyle = "#666";
   for (let i = 0; i < pts.length; i += 2) {
@@ -63,8 +61,8 @@ const leftclick = (event) => {
   }
   else {
     const nv = mydt.closest_point(x, y);
-    if (nv != 0) {
-      console.log(nv);
+    if ((nv != 0) && (mydt.number_of_vertices() >= 4)) {
+      // console.log(nv);
       mydt.remove(nv);
     } 
   }
