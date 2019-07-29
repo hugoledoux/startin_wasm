@@ -1,5 +1,5 @@
 [package]
-name = "wasm-demo"
+name = "startin-wasm-hledoux"
 version = "0.1.0"
 authors = ["Hugo Ledoux <h.ledoux@tudelft.nl>"]
 edition = "2018"
