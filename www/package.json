@@ -9,9 +9,11 @@
   "devDependencies": {
     "hello-wasm-pack": "^0.1.0",
     "webpack": "^4.29.3",
+    "css-loader": "^2.1.0",
+    "style-loader": "^0.23.1",
+    "copy-webpack-plugin": "^5.0.0",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5",
-    "startin-wasm": "file:../pkg",
-    "copy-webpack-plugin": "^5.0.0"
+    "startin-wasm": "file:../pkg"
   }
 }
