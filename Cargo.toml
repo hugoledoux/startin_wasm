@@ -10,8 +10,11 @@ crate-type = ["cdylib"]
 [features]
 default = ["console_error_panic_hook"]
 
+# [dependencies.startin]
+# path = "../startin/"
+
 [dependencies]
-# startin = "0.4.3"
+startin = "0.4.4"
 wasm-bindgen = "0.2"
 
 
@@ -33,5 +36,3 @@ wee_alloc = { version = "0.4.2", optional = true }
 # Tell `rustc` to optimize for small code size.
 opt-level = "s"
 
-[dependencies.startin]
-path = "../startin/"
