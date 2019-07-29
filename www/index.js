@@ -1,4 +1,4 @@
-import * as wasm from "startin-wasm-hledoux";
+import * as wasm from "startin-wasm";
 
 let canvas = document.getElementById("canv");
 canvas.width = window.innerWidth;

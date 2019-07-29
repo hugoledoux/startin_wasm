@@ -11,7 +11,7 @@
     "webpack": "^4.29.3",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5",
-    "startin-wasm-hledoux": "file:../pkg",
+    "startin-wasm": "file:../pkg",
     "copy-webpack-plugin": "^5.0.0"
   }
 }
