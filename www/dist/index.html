@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello wasm-pack!</title>
+  </head>
+  <body>
+    <script src="./bootstrap.js"></script>
+    <link rel="stylesheet" href="./mystyle.css">
+
+    <div class="pageHead">
+      <div class="dropboxBox">
+        <div id="dropbox">
+          <h2 class="dbText">startin Delaunay triangulator</h2>
+          <p class="dbText">number of vertices: <span id="nov"></span></p>
+          <p class="dbText">number of triangles: <span id="notr"></span></p>
+          <button id="btnRandom">
+            Insert random points
+          </button>
+          <input type="number" id="noRandom" value="1000" step="1000" min="0" max="1000000"/>
+          <br>
+          <p class="dbText"><input type="checkbox" id="bDelete" class="dbText">Delete vertices</p>
+          <button id="btnClear">Clear</button>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="infoBox">
+     <p><a href="https://github.com/hugoledoux/startin/">powered by startin</a></p>
+    </div>
+
+
+    <canvas id="canv"></canvas>
+
+
+  </body>
+</html>
