@@ -60,11 +60,13 @@ const leftclick = (event) => {
     mydt.insert_one_pt(x, y, 0.0);
   }
   else {
-    const nv = mydt.closest_point(x, y);
-    if ((nv != 0) && (mydt.number_of_vertices() >= 4)) {
-      // console.log(nv);
-      mydt.remove(nv);
-    } 
+    if (mydt.number_of_triangles() >= 1) {
+      const nv = mydt.closest_point(x, y);
+      if ((nv != 0) && (mydt.number_of_vertices() >= 4)) {
+        // console.log(nv);
+        mydt.remove(nv);
+      } 
+    }
   }
   refreshcanvas();
 };
