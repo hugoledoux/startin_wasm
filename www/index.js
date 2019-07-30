@@ -52,11 +52,11 @@ const refreshcanvas = () => {
 };
 
 const leftclick = (event) => {
-  var b = document.getElementById("bDelete");
+  var b = document.getElementById("rbinsert");
   const rect = canvas.getBoundingClientRect();
   const x = event.clientX - rect.left;
   const y = event.clientY - rect.top;
-  if (b.checked == false) {
+  if (b.checked == true) {
     mydt.insert_one_pt(x, y, 0.0);
   }
   else {

@@ -10,25 +10,36 @@
     <div class="pageHead">
       <div class="dropboxBox">
         <div id="dropbox">
-          <h2 class="dbText">startin Delaunay triangulator</h2>
-          <p class="dbText">number of vertices: <span id="nov"></span></p>
-          <p class="dbText">number of triangles: <span id="notr"></span></p>
+          <h2 class="dbText"><a href="https://github.com/hugoledoux/startin/">startin Delaunay triangulator</a></h2>
+          <p class="dbText">
+            <table>
+              <tr>
+                <th class="dbText" align="left"># vertices</th>
+                <th class="dbText" align="left">&nbsp;&nbsp;</th>
+                <td class="dbText" align="right"><span id="nov"></span></td>
+              </tr>
+              <tr>
+                <th class="dbText" align="left"># triangles</th>
+                <th class="dbText" align="left">&nbsp;&nbsp;</th>
+                <td class="dbText" align="right"><span id="notr"></span></td>
+              </tr>
+            </table>
+          </p>
+          <form>
+            <input type="radio" name="dtaction" id="rbinsert" checked> <span class="dbText">Insert</span><br>
+            <input type="radio" name="dtaction" id="rbdelete"        > <span class="dbText">Delete</span><br>
+          </form> 
+          <br>  
           <button id="btnRandom">
             Insert random points
           </button>
           <input type="number" id="noRandom" value="1000" step="1000" min="0" max="1000000"/>
-          <br>
-          <p class="dbText"><input type="checkbox" id="bDelete" class="dbText">Delete vertices</p>
+              
           <button id="btnClear">Clear</button>
 
         </div>
       </div>
     </div>
-
-    <div class="infoBox">
-     <p><a href="https://github.com/hugoledoux/startin/">powered by startin</a></p>
-    </div>
-
 
     <canvas id="canv"></canvas>
 
@@ -68,9 +79,14 @@
     }
 
 
-    .dbText {
+    .dbText  {
       font-family: Arial, Helvetica, sans-serif;
       font-size: small;
+    }
+
+    a, a:visited, a:hover, a:active {
+      color: inherit;
+      text-decoration:none; 
     }
   </style>
 
