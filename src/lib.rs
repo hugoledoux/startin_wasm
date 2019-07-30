@@ -57,9 +57,9 @@ impl DT {
         let mut trs: Vec<usize> = Vec::new();
         let otrs = self.t.all_triangles();
         for each in otrs.iter() {
-            trs.push(each.tr0);
-            trs.push(each.tr1);
-            trs.push(each.tr2);
+            trs.push(each.v[0]);
+            trs.push(each.v[1]);
+            trs.push(each.v[2]);
         }
         trs
     }
