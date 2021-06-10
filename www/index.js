@@ -63,12 +63,17 @@ async function main() {
     const y = event.clientY - rect.top;
     if (b.checked == true) {
       mydt.insert_one_pt(x, y, 0.0);
+      console.log('i: (' + x + ', ' + y +')');
     }
     else {
       if (mydt.number_of_triangles() >= 1) {
         const nv = mydt.closest_point(x, y);
+        if (nv == 0) {
+          console.log('r: OUTSIDE' );
+        }
         if ((nv != 0) && (mydt.number_of_vertices() >= 4)) {
           // console.log(nv);
+          console.log('r: ' + nv);
           mydt.remove(nv);
         } 
       }
