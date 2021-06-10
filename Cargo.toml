@@ -8,7 +8,7 @@ edition = "2018"
 crate-type = ["cdylib"]
 
 [dependencies]
-startin = "0.5.*"
+startin = "0.5.1"
 wasm-bindgen = "0.2.74"
 
 [profile.release]
