@@ -47,7 +47,7 @@ async function main() {
     //-- draw VD
     if (document.getElementById("cbvoronoi").checked == true) {
       ctx.strokeStyle = "#f87826";
-      const voroedges = mydt.all_voronoi_edges_2();
+      const voroedges = mydt.all_voronoi_edges();
       // console.log(voroedges);
       for (let i = 0; i < voroedges.length; i += 4) {
         ctx.beginPath();
