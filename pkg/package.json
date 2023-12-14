@@ -3,7 +3,7 @@
   "collaborators": [
     "Hugo Ledoux <h.ledoux@tudelft.nl>"
   ],
-  "version": "0.5.0",
+  "version": "0.6.0",
   "files": [
     "startin_wasm_bg.wasm",
     "startin_wasm.js",
@@ -11,5 +11,7 @@
   ],
   "module": "startin_wasm.js",
   "types": "startin_wasm.d.ts",
-  "sideEffects": false
+  "sideEffects": [
+    "./snippets/*"
+  ]
 }
